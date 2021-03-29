@@ -13,5 +13,12 @@ Once that is done, you are *good to go* to
 - Get started with the org agenda
 - Run code inside orgmode documents and make jupyter notebooks look like a silly toy.
 - Use orgmode to do all kinds of literate programming
-  
+
   - (examples coming soon)
+
+* References
+
+- [[https://en.wikipedia.org/wiki/Org-mode][Wikipedia : Org-mode]]
+- [[https://orgmode.org]]
+- Article by Carsten Dominik et al.  [[https://www.researchgate.net/publication/231337373_A_Multi-Language_Computing_Environment_for_Literate_Programming_and_Reproducible_Research][A Multi-Language Computing Environment for Literate Programming and Reproducible Research]]
+- [[https://www.youtube.com/watch?v=oJTwQvgfgMM][Google Tech Talk in 2008 by Carsten Dominik]]
