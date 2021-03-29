@@ -80,25 +80,6 @@
   :config (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js"))
 (use-package htmlize :ensure t)
 
-(defun ox-reveal () (interactive) (org-reveal-export-to-html-and-browse nil t))
-(defun ox-twbs () (interactive) (browse-url (org-twbs-export-to-html nil t)))
-(defun ox-twbs-all () (interactive) (browse-url (org-twbs-export-to-html nil nil)))
-(defun ox-html () (interactive) (browse-url (org-html-export-to-html nil t)))
-(defun ox-html-all () (interactive) (browse-url (org-html-export-to-html nil nil)))
-(defun ox-rst () (interactive) (org-open-file (org-rst-export-to-rst nil t)))
-(defun ox-rst-all () (interactive) (org-open-file (org-rst-export-to-rst nil nil)))
-(easy-menu-define present-menu org-mode-map
-  "Menu for word navigation commands."
-  '("Present"
-    ["Present Right Now (C-c C-e R B)" org-reveal-export-to-html-and-browse]
-    ["Present Subtree Right Now (C-c C-e C-s R B)" ox-reveal]
-    ["View Twitter Bootstrap HTML Right now (C-c C-e C-s w o)" ox-twbs]
-    ["View Twitter Bootstrap HTML all Right now (C-c C-e w o)" ox-twbs-all]
-    ["View RST Right Now (C-c C-e C-s r R)" ox-rst]
-    ["View RST All Right Now (C-c C-e r R)" ox-rst-all]
-    ["View straight-pipe HTML Right Now (C-c C-e C-s h o)" ox-html]
-    ["View straight-pipe HTML All Right Now (C-c C-e h o)" ox-html-all]))
-
 (defun org-insert-subheading-respect-content (arg)
   "Insert a new subheading and demote it.
 Works for outline headings and for plain lists alike."
@@ -143,7 +124,6 @@ Works for outline headings and for plain lists alike."
           (ansi-color-apply-on-region beg end))))))
 (add-hook 'org-babel-after-execute-hook 'ek/babel-ansi)
 
-;; STARTING HERE IS JUST DEFINING KEYS 
 (define-prefix-command 'leader-key)
 
 (global-set-key (kbd "M-m") 'leader-key)
@@ -256,3 +236,22 @@ Works for outline headings and for plain lists alike."
 (define-key org-agenda-keys (kbd "w f") 'for000-agenda-view)
 (define-key org-agenda-keys (kbd "w p") 'publish-work-agenda-views)
 (define-key org-agenda-keys (kbd "w p") 'phc001-agenda-view)
+
+(defun ox-reveal () (interactive) (org-reveal-export-to-html-and-browse nil t))
+(defun ox-twbs () (interactive) (browse-url (org-twbs-export-to-html nil t)))
+(defun ox-twbs-all () (interactive) (browse-url (org-twbs-export-to-html nil nil)))
+(defun ox-html () (interactive) (browse-url (org-html-export-to-html nil t)))
+(defun ox-html-all () (interactive) (browse-url (org-html-export-to-html nil nil)))
+(defun ox-rst () (interactive) (org-open-file (org-rst-export-to-rst nil t)))
+(defun ox-rst-all () (interactive) (org-open-file (org-rst-export-to-rst nil nil)))
+(easy-menu-define present-menu org-mode-map
+  "Menu for word navigation commands."
+  '("Present"
+    ["Present Right Now (C-c C-e R B)" org-reveal-export-to-html-and-browse]
+    ["Present Subtree Right Now (C-c C-e C-s R B)" ox-reveal]
+    ["View Twitter Bootstrap HTML Right now (C-c C-e C-s w o)" ox-twbs]
+    ["View Twitter Bootstrap HTML all Right now (C-c C-e w o)" ox-twbs-all]
+    ["View RST Right Now (C-c C-e C-s r R)" ox-rst]
+    ["View RST All Right Now (C-c C-e r R)" ox-rst-all]
+    ["View straight-pipe HTML Right Now (C-c C-e C-s h o)" ox-html]
+    ["View straight-pipe HTML All Right Now (C-c C-e h o)" ox-html-all]))
