@@ -1,0 +1,17 @@
+#+TITLE: Good to go
+
+A starting point for an emacs config with everything that is missing from stock
+emacs.
+
+Clone this repo as your =~/.emacs.d= and make sure that there is no =~/.emacs=
+file.
+
+Once that is done, you are *good to go* to
+
+- Publish documents in all kinds of formats
+- Take notes and organize them like a boss
+- Get started with the org agenda
+- Run code inside orgmode documents and make jupyter notebooks look like a silly toy.
+- Use orgmode to do all kinds of literate programming
+  
+  - (examples coming soon)
