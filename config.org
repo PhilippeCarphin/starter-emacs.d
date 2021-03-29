@@ -338,34 +338,6 @@ In the export menu
 | =w o= | =org-twbs-export-to-html=              | Twitter Bootstrap html |
 Except for =R B= the displayed LISP function does not open the file and the
 dispatcher opens it after that function has run.
-*** Present GUI menu
-   :PROPERTIES:
-   :HEADER-ARGS: :tangle yes
-   :END:
-
-  This adds the "Present" menu at the top with menu item "Present Now".
-
-  #+begin_src emacs-lisp :results none
-    (defun ox-reveal () (interactive) (org-reveal-export-to-html-and-browse nil t))
-    (defun ox-twbs () (interactive) (browse-url (org-twbs-export-to-html nil t)))
-    (defun ox-twbs-all () (interactive) (browse-url (org-twbs-export-to-html nil nil)))
-    (defun ox-html () (interactive) (browse-url (org-html-export-to-html nil t)))
-    (defun ox-html-all () (interactive) (browse-url (org-html-export-to-html nil nil)))
-    (defun ox-rst () (interactive) (org-open-file (org-rst-export-to-rst nil t)))
-    (defun ox-rst-all () (interactive) (org-open-file (org-rst-export-to-rst nil nil)))
-    (easy-menu-define present-menu org-mode-map
-      "Menu for word navigation commands."
-      '("Present"
-	["Present Right Now (C-c C-e R B)" org-reveal-export-to-html-and-browse]
-	["Present Subtree Right Now (C-c C-e C-s R B)" ox-reveal]
-	["View Twitter Bootstrap HTML Right now (C-c C-e C-s w o)" ox-twbs]
-	["View Twitter Bootstrap HTML all Right now (C-c C-e w o)" ox-twbs-all]
-	["View RST Right Now (C-c C-e C-s r R)" ox-rst]
-	["View RST All Right Now (C-c C-e r R)" ox-rst-all]
-	["View straight-pipe HTML Right Now (C-c C-e C-s h o)" ox-html]
-	["View straight-pipe HTML All Right Now (C-c C-e h o)" ox-html-all]))
-  #+end_src
-
 *** Add keys to insert subheadings
 :PROPERTIES:
 :HEADER-ARGS: :tangle yes
@@ -1061,6 +1033,34 @@ non-prefix key.
 | =SPC a w f= | =for000-agenda-view= |
 
 
+* Org Present GUI menu
+   :PROPERTIES:
+   :HEADER-ARGS: :tangle yes
+   :END:
+
+  This adds the "Present" menu at the top with menu item "Present Now".
+
+  #+begin_src emacs-lisp :results none
+    (defun ox-reveal () (interactive) (org-reveal-export-to-html-and-browse nil t))
+    (defun ox-twbs () (interactive) (browse-url (org-twbs-export-to-html nil t)))
+    (defun ox-twbs-all () (interactive) (browse-url (org-twbs-export-to-html nil nil)))
+    (defun ox-html () (interactive) (browse-url (org-html-export-to-html nil t)))
+    (defun ox-html-all () (interactive) (browse-url (org-html-export-to-html nil nil)))
+    (defun ox-rst () (interactive) (org-open-file (org-rst-export-to-rst nil t)))
+    (defun ox-rst-all () (interactive) (org-open-file (org-rst-export-to-rst nil nil)))
+    (easy-menu-define present-menu org-mode-map
+      "Menu for word navigation commands."
+      '("Present"
+	["Present Right Now (C-c C-e R B)" org-reveal-export-to-html-and-browse]
+	["Present Subtree Right Now (C-c C-e C-s R B)" ox-reveal]
+	["View Twitter Bootstrap HTML Right now (C-c C-e C-s w o)" ox-twbs]
+	["View Twitter Bootstrap HTML all Right now (C-c C-e w o)" ox-twbs-all]
+	["View RST Right Now (C-c C-e C-s r R)" ox-rst]
+	["View RST All Right Now (C-c C-e r R)" ox-rst-all]
+	["View straight-pipe HTML Right Now (C-c C-e C-s h o)" ox-html]
+	["View straight-pipe HTML All Right Now (C-c C-e h o)" ox-html-all]))
+  #+end_src
+
 * Evil mode
   :PROPERTIES:
   :HEADER-ARGS: :tangle no
@@ -1133,5 +1133,6 @@ Reference : [[https://www.youtube.com/watch?v=xaZMwNELaJY][Emacs From Scratch #3
  #+begin_src emacs-lisp
  (blink-cursor-mode 0)
  #+end_src
+
 
 
