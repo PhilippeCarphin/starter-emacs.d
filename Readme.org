@@ -27,6 +27,6 @@ Once that is done, you are *good to go* to
 * Try super quick
 Run this code in emacs to download and open the config file:
 #+begin_src emacs-lisp
-     (progn (browse-web "https://raw.githubusercontent.com/PhilippeCarphin/emacs.d/master/config.org")
-     (org-mode))
+(progn (browse-web "https://raw.githubusercontent.com/PhilippeCarphin/emacs.d/master/config.org")
+       (org-mode))
 #+end_src
