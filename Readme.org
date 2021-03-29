@@ -22,3 +22,11 @@ Once that is done, you are *good to go* to
 - [[https://orgmode.org]]
 - Article by Carsten Dominik et al.  [[https://www.researchgate.net/publication/231337373_A_Multi-Language_Computing_Environment_for_Literate_Programming_and_Reproducible_Research][A Multi-Language Computing Environment for Literate Programming and Reproducible Research]]
 - [[https://www.youtube.com/watch?v=oJTwQvgfgMM][Google Tech Talk in 2008 by Carsten Dominik]]
+
+
+* Try super quick
+Run this code in emacs to download and open the config file:
+#+begin_src emacs-lisp
+     (progn (browse-web "https://raw.githubusercontent.com/PhilippeCarphin/emacs.d/master/config.org")
+     (org-mode))
+#+end_src
