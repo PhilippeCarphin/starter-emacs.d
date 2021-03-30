@@ -106,6 +106,15 @@ with a special char indicating visual wrapping.
 (global-visual-line-mode 1)
 #+end_src
 
+**** Visual line markers
+     :PROPERTIES:
+     :HEADER-ARGS: :tangle yes
+     :END:
+
+ #+begin_src emacs-lisp
+ (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+ #+end_src
+
 *** Startup color theme
    :PROPERTIES:
    :HEADER-ARGS: :tangle yes
@@ -160,16 +169,6 @@ To change the font, as per this [[http://emacs.1067599.n8.nabble.com/Changing-fo
  (global-set-key (kbd "C-x C-c") 'save-buffers-kill-emacs)
  #+end_src
   
-*** Visual line markers
-:PROPERTIES:
-:HEADER-ARGS: :tangle yes
-:END:
-
-#+begin_src emacs-lisp
-(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
-#+end_src
-
-
 ** Helper packages
 *** Undo tree
    :PROPERTIES:
