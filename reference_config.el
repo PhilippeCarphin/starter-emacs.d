@@ -18,18 +18,15 @@
 
 (blink-cursor-mode)
 
-(setq-default auto-fill-function 'do-auto-fill)
-(setq-default fill-column 80)
-
 (global-visual-line-mode 1)
+
+(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 
 (load-theme 'misterioso)
 
 (custom-set-variables '(vc-follow-symlinks t))
 
 (global-set-key (kbd "C-x C-c") 'save-buffers-kill-emacs)
-
-(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 
 (use-package undo-tree
   :ensure t

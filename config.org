@@ -86,7 +86,7 @@ Helps to not get confused with vim.
 *** Wrapping
 **** Hard wrap as you type
     :PROPERTIES:
-    :HEADER-ARGS: :tangle yes
+    :HEADER-ARGS: :tangle no
     :END:
 Automattically hard-wrap text on 80 chars as you type.
 
