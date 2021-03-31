@@ -16,6 +16,15 @@ Once that is done, you are *good to go* to
 
   - (examples coming soon)
 
+* Témoignages
+
+  #+begin_quote
+  Les possibilitées sont énormes, c'est un markup très simple et très complet
+qui me permet de gérer ma documentation de façcon efficace. La possibilité
+d'exécuter les blocs de code, les formats d'exportations, et l'organisation de
+la documentaton met permet d'être plus productif. - Sébastien Fortier
+#+end_quote
+
 * References
 
 - [[https://en.wikipedia.org/wiki/Org-mode][Wikipedia : Org-mode]]
