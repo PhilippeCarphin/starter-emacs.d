@@ -112,8 +112,6 @@ Works for outline headings and for plain lists alike."
 
 (setq org-confirm-babel-evaluate nil)
 
-(setq org-export-use-babel nil)
-
 (defun ek/babel-ansi ()
   (when-let ((beg (org-babel-where-is-src-block-result nil nil)))
     (save-excursion

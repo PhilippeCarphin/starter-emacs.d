@@ -780,7 +780,7 @@ surprised that a command runs when the press enter in a shell.
 
 ** Disable babel on export
     :PROPERTIES:
-    :HEADER-ARGS: :tangle yes
+    :HEADER-ARGS: :tangle no
     :END:
 
 When tweaking the document and frequently exporting, it can be useful to not run
