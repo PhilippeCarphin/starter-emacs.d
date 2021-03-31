@@ -36,6 +36,15 @@ a-package)= and adds convenience functions.
 :END:
 
 ** Minor tweaks
+*** Hide scrollbars and toolbars
+   :PROPERTIES:
+   :HEADER-ARGS: :tangle yes
+   :END:
+
+#+begin_src emacs-lisp
+;; (tool-bar-mode -1)
+(scroll-bar-mode -1)
+#+end_src
 *** Scrolling behavior
    :PROPERTIES:
    :HEADER-ARGS: :tangle yes
@@ -260,7 +269,7 @@ You have to delete a bracket to get the real text to show up.
 [[https://google.com][Google]]
 
 #+begin_src emacs-lisp
-(setq org-descriptive-links nil)
+(setq org-link-descriptive nil)
 ;; Note (org-mode-restart) is required for this to take effect
 #+end_src
 

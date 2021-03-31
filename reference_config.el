@@ -9,6 +9,9 @@
     (package-install 'use-package))
 (eval-when-compile (require 'use-package))
 
+;; (tool-bar-mode -1)
+(scroll-bar-mode -1)
+
 (setq scroll-step 1)
 (setq-default scroll-margin 10)
 
@@ -58,7 +61,7 @@
 
 (add-hook 'org-mode-hook 'configure-ellipsis)
 
-(setq org-descriptive-links nil)
+(setq org-link-descriptive nil)
 ;; Note (org-mode-restart) is required for this to take effect
 
 (use-package org-bullets
