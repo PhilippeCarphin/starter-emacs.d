@@ -1142,5 +1142,15 @@ Reference : [[https://www.youtube.com/watch?v=xaZMwNELaJY][Emacs From Scratch #3
  (blink-cursor-mode 0)
  #+end_src
 
+* Other languages
+:PROPERTIES:
+:HEADER-ARGS: :tangle yes
+:END:
 
-
+#+begin_src emacs-lisp
+(use-package yaml-mode :ensure t)
+(use-package ssh-config-mode :ensure t)
+(use-package cmake-mode :ensure t)
+(use-package vimrc-mode :ensure t)
+(use-package markdown-mode+ :ensure t)
+#+end_src
