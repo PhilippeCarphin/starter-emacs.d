@@ -876,7 +876,7 @@ see its implementation!
 ** Files
 
 #+begin_src emacs-lisp
-(defun open-emacs-config-file () (interactive) (find-file "~/.emacs.d/config.org"))
+(defun open-emacs-config-file () (interactive) (find-file (concat user-emacs-directory "/config.org")))
 (define-prefix-command 'files)
 (define-key leader-key (kbd "f") 'files)
 
